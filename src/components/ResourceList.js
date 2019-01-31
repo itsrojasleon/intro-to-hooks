@@ -15,6 +15,12 @@ function ResourceList({ resource }) {
     },
     [resource]
   );
-  return <div>{resources.length}</div>;
+  return (
+    <ul>
+      {resources.map(resource => (
+        <li key={resource.id}>{resource.title}</li>
+      ))}
+    </ul>
+  );
 }
 export default ResourceList;
